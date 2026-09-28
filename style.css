@@ -1,629 +1,159 @@
-* {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #66b9fa;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: black;
-    height: 100vh;
-    padding: 20px;
-    padding-bottom: 1000px;
-}
-
-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 40px;
-    color: white;
-    position: fixed;
-    top: 0;
-    background-color: black;
-    width: 100%;
+    height: 100vh;
 }
 
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    position: relative;
-    font-family: 'Inter', sans-serif;
-    font-weight: 200;
-}
-
-.menu li:not(:last-child) {
-    margin-right: 200px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
+.container {
+    background-color: #b3e5fc;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
 }
 
 h1 {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 15px;
-    margin-left: 5%;
-}
-
-h2 {
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-weight: 100;
-    line-height: 1.9;
-    font-size: 20%;
-}
-
-h3 {
-    color: #8A2BE2;
-    font-family: 'Inter', sans-serif;
-    font-size: 100%;
-    margin-left: 5%;
-    font-weight: 2000;
-}
-
-p {
-    font-family: 'Inter', sans-serif;
-}
-
-.nome {
-    font-size: 70px;
-    margin-right: 80%;
-    margin-left: 40%;
-    position: relative;
-    top: -300px;
-    white-space: nowrap;
-
-}
-
-.desenvolvedora {
-    margin-right: 80%;
-    margin-left: 45%;
-    position: relative;
-    top: -280px;
-    white-space: nowrap;
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    color: #8A2BE2;
-    font-size: 150%;
-}
-
-
-.icons {
-    display: flex;
-    gap: 20px;
-    font-size: 30px;
-    margin-top: -5px;
-    margin-left: 850px;
-    position: relative;
-    top: -250px;
-}
-
-
-.icons a {
-    color: #ffffff;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.icons a:hover {
-    color: #8A2BE2;
-    transform: translateY(-3px);
-}
-
-#banner {
-    margin-top: 80px;
-    margin-bottom: -100px;
-}
-
-.perfil {
-    margin-left: 8%;
-}
-
-.textsobre {
-    margin-right: 70%;
-    margin-left: 5%;
-    font-size: 100%;
-}
-
-.card-grande {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin: 60px auto;
-    width: 40%;
-    border-radius: 20px;
-    background: #0a0a0a;
-    border: 1px solid rgba(124, 58, 237, 0.3);
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.1);
-    margin-left: 45%;
-    margin-top: -13%;
-}
-
-.icondev {
-  width: 40px;
-  height: 40px;
-  margin-right: 4   %;
-}
-
-.icondesign {
-  width: 35px;
-  height: 35px;
-}
-
-.iconperf{
-  width: 40px;
-  height: 40px;
-}
-
-.item {
-    text-align: center;
-    flex: 1;
-    padding: 20px;
-}
-
-.item i {
-  font-size: 30px;
-  color: #8A2BE2;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.item h3 {
-    color: #7c3aed;
-    margin-bottom: 8px;
-}
-
-.item p {
-    color: #bbb;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.divisor {
-    width: 1px;
-    height: 80px;
-    background: rgba(124, 58, 237, 0.3);
-}
-/* ======================================================
-   ADIÇÕES — mantendo a mesma paleta e tipografia do projeto
-   ====================================================== */
-
-/* Ícone do Currículo — mesmo estilo dos demais ícones sociais */
-.icons a[title="Baixar Currículo"] {
-    position: relative;
-}
-
-/* Botão "Mais informações" + texto expansível */
-.btn-mais {
-    display: block;
-    margin: 20px 0 10px 5%;
-    background: transparent;
-    border: 1px solid #8A2BE2;
-    color: #8A2BE2;
-    padding: 10px 24px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.btn-mais:hover {
-    background: #8A2BE2;
-    color: #fff;
-}
-
-.extra-info {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    margin-left: 5%;
-    margin-right: 70%;
-    color: #bbb;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 1.7;
-    transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
-}
-
-.extra-info.aberto {
-    max-height: 300px;
-    opacity: 1;
-    margin-top: 15px;
-}
-
-/* Carrossel de Skills */
-.carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-    margin: 30px 5% 60px 5%;
-}
-
-.carousel-track-wrapper {
-    overflow: hidden;
-    width: 70%;
-    max-width: 700px;
-}
-
-.carousel-track {
-    display: flex;
-    gap: 60px;
-    transition: transform 0.4s ease;
-}
-
-.skill-item {
-    flex: 0 0 auto;
-    text-align: center;
-    min-width: 110px;
-}
-
-.skill-item img {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;
-    margin-bottom: 12px;
-}
-
-.skill-item h2 {
-    font-size: 16px;
-    line-height: 1.4;
-    font-weight: 300;
-}
-
-.carousel-btn {
-    flex-shrink: 0;
-    background: transparent;
-    border: 1px solid #8A2BE2;
-    color: #8A2BE2;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.carousel-btn:hover {
-    background: #8A2BE2;
-    color: #fff;
-}
-
-.carousel-btn:disabled {
-    opacity: 0.3;
-    cursor: default;
-}
-
-/* Projetos: foto à esquerda, detalhamento à direita */
-.projeto {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin: 0 5% 60px 5%;
-}
-
-.projeto-img {
-    width: 45%;
-    max-width: 420px;
-    border-radius: 16px;
-    border: 1px solid rgba(124, 58, 237, 0.3);
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.08);
-}
-
-.projeto-detalhes {
-    flex: 1;
-}
-
-.projeto-detalhes h3 {
-    margin-left: 0;
-    font-size: 130%;
+    font-size: 2.5em;
     margin-bottom: 10px;
+    color: #01579b;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.projeto-detalhes p {
-    color: #bbb;
-    line-height: 1.7;
-    font-size: 14px;
-    margin-bottom: 16px;
+#score {
+    font-size: 1.2em;
+    color: #0288d1;
+    margin-bottom: 20px;
+    font-family: 'Courier New', monospace;
 }
 
-.projeto-links {
-    display: flex;
-    gap: 20px;
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.projeto-links a {
-    color: #8A2BE2;
-    text-decoration: none;
-    font-size: 14px;
-    font-family: 'Inter', sans-serif;
-}
-
-.projeto-links a:hover {
-    text-decoration: underline;
-}
-
-/* Experiências */
-.experiencia {
-    margin: 30px 5% 40px 5%;
-    padding: 25px 30px;
-    border-left: 3px solid #8A2BE2;
-    background: #0a0a0a;
-    border-radius: 0 12px 12px 0;
-}
-
-.experiencia h3 {
-    margin-left: 0;
-    margin-bottom: 4px;
-}
-
-.experiencia-sub {
-    display: block;
-    color: #8A2BE2;
-    font-size: 13px;
-    margin-bottom: 12px;
-    font-family: 'Inter', sans-serif;
-}
-
-.experiencia p {
-    color: #bbb;
-    line-height: 1.7;
-    font-size: 14px;
-}
-
-/* Contato — painel próprio, destacado do resto da página */
-.contato-section {
+.color-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
-    margin-top: 100px;
-    padding: 80px 0 40px 0;
-    background: radial-gradient(circle at 20% 0%, rgba(138, 43, 226, 0.12), transparent 45%),
-                #050505;
-    border-top: 1px solid rgba(138, 43, 226, 0.35);
+    opacity: 1;
 }
 
-.contato-section::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #8A2BE2, transparent);
+#red {
+    background-color: #ff0000; 
 }
 
-.contato-container {
-    display: flex;
-    gap: 60px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 5%;
+#green {
+    background-color: #1eff00; 
 }
 
-.contato-info,
-.contato-container .form-contato {
-    flex: 1;
+#blue {
+    background-color: rgb(36, 2, 189); 
 }
 
-.contato-info h1,
-.contato-info h3 {
-    margin-left: 0;
+#yellow {
+    background-color: #fbff00; 
 }
 
-.contato-info > p {
-    color: #bbb;
-    font-size: 14px;
-    line-height: 1.7;
-    max-width: 380px;
-    margin-bottom: 25px;
+
+.color-button.active {
+    transform: scale(1.2);  
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
+    filter: brightness(1.5);  
+    opacity: 1;
 }
 
-.rodape {
-    text-align: center;
-    color: #555;
-    font-size: 12px;
-    margin-top: 60px;
-    font-family: 'Inter', sans-serif;
+.color-button.inactive {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
-@media (max-width: 800px) {
-    .contato-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-}
-
-.form-contato {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    margin: 0;
-}
-
-.form-contato input,
-.form-contato textarea {
-    background: #0a0a0a;
-    border: 1px solid rgba(124, 58, 237, 0.3);
-    border-radius: 8px;
-    padding: 12px 16px;
-    color: #fff;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-}
-
-.form-contato textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.form-contato input:focus,
-.form-contato textarea:focus {
-    outline: none;
-    border-color: #8A2BE2;
-}
-
-.form-contato button {
-    align-self: flex-start;
-    background: #8A2BE2;
+#startBtn {
+    background-color: #03a9f4;
+    color: white;
     border: none;
-    color: #fff;
-    padding: 12px 30px;
+    padding: 15px 30px;
+    font-size: 1.2em;
     border-radius: 30px;
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    transition: opacity 0.3s ease;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.form-contato button:hover {
-    opacity: 0.85;
+#startBtn:hover {
+    background-color: #0288d1;
 }
 
-.form-msg {
-    margin-top: -4px;
-    color: #8A2BE2;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    display: none;
+#startBtn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.icons-contato {
-    display: flex;
-    gap: 20px;
-    font-size: 26px;
-}
-
-.icons-contato a {
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.icons-contato a:hover {
-    color: #8A2BE2;
-}
-
-/* Menu: link ativo conforme rolagem */
-.menu a.active {
-    color: #8A2BE2;
-}
-
-/* Efeito de revelação ao rolar a página */
-.reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsivo básico para as novas seções */
-@media (max-width: 800px) {
-    .projeto {
-        flex-direction: column;
-    }
-    .projeto-img {
-        width: 100%;
-    }
-    .carousel-track-wrapper {
-        width: 55%;
-    }
-    .form-contato {
+@media (max-width: 500px) {
+    .container {
         width: 90%;
+        padding: 20px;
+    }
+
+    .color-button {
+        width: 120px;
+        height: 120px;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(2, 120px);
+    }
+
+    #startBtn {
+        font-size: 1em;
+        padding: 10px 20px;
     }
 }
-
-/* ======================================================
-   Efeitos extras em JS
-   ====================================================== */
-
-/* Barra de progresso de leitura no topo */
-.progress-bar {
+#error-message {
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 3px;
-    width: 0%;
-    background: linear-gradient(90deg, #8A2BE2, #c084fc);
-    z-index: 2000;
-    transition: width 0.1s ease-out;
-}
-
-/* Brilho roxo seguindo o cursor no banner */
-.cursor-glow {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(138, 43, 226, 0.18) 0%, transparent 70%);
-    pointer-events: none;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
+    background-color: rgba(255, 99, 71, 0.95); 
+    color: #fff;
+    padding: 25px 40px;
+    border-radius: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: slide-down 0.5s ease;  
+}
+
+#error-message.fade-out {
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 1s ease;
 }
 
-.cursor-glow.ativo {
-    opacity: 1;
-}
-
-/* Cursor piscante do efeito de digitação */
-.cursor-piscante {
-    color: #8A2BE2;
-    animation: piscar 1s step-end infinite;
-}
-
-@keyframes piscar {
-    0%, 50% { opacity: 1; }
-    50.01%, 100% { opacity: 0; }
-}
-
-/* Tilt 3D nas imagens de projeto */
-.tilt {
-    transition: transform 0.15s ease-out;
-    transform-style: preserve-3d;
-    will-change: transform;
-}
-
-/* Efeito ripple nos botões */
-.ripple-btn {
-    position: relative;
-    overflow: hidden;
-}
-
-.ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    transform: scale(0);
-    animation: ripple-anim 0.6s ease-out;
-    pointer-events: none;
-}
-
-@keyframes ripple-anim {
-    to {
-        transform: scale(3);
+@keyframes slide-down {
+    0% {
+        transform: translate(-50%, -100%);
         opacity: 0;
     }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
 }
 
-/* Skills em foco durante o autoplay do carrossel */
-.skill-item {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
 
-.skill-item.em-foco img {
-    transform: scale(1.1);
-}
+
+   
