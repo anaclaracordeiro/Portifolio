@@ -1,24 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo Sequência de Cores</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Meu Portifólio</title>
 </head>
-<body>
-    <div class="container">
-        <h1>Jogo sequência de Cores</h1>
-        <div id="score">Pontuação: 0</div>
-        <div class="buttons">
-            <div class="color-button" id="red"></div>
-            <div class="color-button" id="green"></div>
-            <div class="color-button" id="blue"></div>
-            <div class="color-button" id="yellow"></div>
-        </div>
-        <button id="startBtn">Iniciar Jogo</button>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
 
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#experiencias">Experièncias</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="banner">
+        <img class="perfil" src="img/perfilport.png" alt="Foto de perfil de Ana Clara Cordeiro" srcset="">
+        <h1 class="nome">Ana Clara Cordeiro</h1>
+        <p class="desenvolvedora"><span id="typedText"></span><span class="cursor-piscante">|</span></p>
+        <div class="icons">
+            <a href="mailto:seuemail@gmail.com" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/seuuser" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/seuuser" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="curriculo.pdf" target="_blank" class="ripple-btn" aria-label="Currículo" title="Baixar Currículo"><i class="fa-solid fa-file-arrow-down"></i></a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h3>SOBRE MIM</h3>
+        <h1>Sobre Mim</h1>
+        <h2 class="textsobre">
+           Sou desenvolvedora front-end em formação, apaixonada por criar experiências web modernas, funcionais e acessíveis. 
+           Busco constantemente aprimorar minhas habilidades no front-end e evoluir no back-end, com o objetivo de me tornar uma profissional completa.
+        </h2>
+
+        <button class="btn-mais ripple-btn">Mais informações</button>
+        <p class="extra-info">
+            Aqui entra um pouco mais sobre a sua trajetória: cursos, formação, o que te motivou a entrar na área e o que você busca a seguir. Preencha com o seu texto.
+        </p>
+    </section>
+
+    <section class="card-grande reveal">
+
+        <div class="item">
+           <img class="icondev" src="icons/formato-html.png" alt="">
+            <h3>Desenvolvimento</h3>
+            <p>Criação de interfaces modernas e bem estruturadas em HTML, CSS e JavaScript</p>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="item">
+           <img class="iconperf" src="icons/foguete.png" alt="">
+            <h3>Performance</h3>
+            <p>Interfaces rápidas e eficientes, com foco em desempenho e melhor experiência.</p>
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="item">
+           <img class="icondesign" src="icons/pallete.png" alt="">
+            <h3>Design</h3>
+            <p>Criação de layouts organizados, com foco em clareza, harmonia visual e boa usabilidade.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h3>SKILLS</h3>
+        <h1>Minhas Skills</h1>
+
+        <div class="carousel-container">
+            <button class="carousel-btn prev ripple-btn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track">
+                    <div class="skill-item">
+                        <img src="icons/html-5.png" alt="HTML">
+                        <h2>HTML</h2>
+                    </div>
+                    <div class="skill-item">
+                        <img src="icons/css-3.png" alt="CSS">
+                        <h2>CSS</h2>
+                    </div>
+                    <div class="skill-item">
+                        <img src="icons/js.png" alt="JavaScript">
+                        <h2>JavaScript</h2>
+                    </div>
+                    <div class="skill-item">
+                        <img src="icons/figma.png" alt="Figma">
+                        <h2>Figma</h2>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-btn next ripple-btn" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h3>PROJETOS</h3>
+        <h1>Meus Projetos</h1>
+
+        <div class="projeto reveal">
+            <img class="projeto-img tilt" src="img/projeto1.png" alt="Screenshot do projeto 1">
+            <div class="projeto-detalhes">
+                <h3>Nome do Projeto 1</h3>
+                <p>Descreva aqui do que se trata o projeto, quais problemas ele resolve e quais tecnologias foram usadas.</p>
+                <div class="projeto-links">
+                    <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Código</a>
+                    <a href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Ver online</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="projeto reveal">
+            <img class="projeto-img" src="img/projeto2.png" alt="Screenshot do projeto 2">
+            <div class="projeto-detalhes">
+                <h3>Nome do Projeto 2</h3>
+                <p>Descreva aqui do que se trata o projeto, quais problemas ele resolve e quais tecnologias foram usadas.</p>
+                <div class="projeto-links">
+                    <a href="#" target="_blank"><i class="fa-brands fa-github"></i> Código</a>
+                    <a href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Ver online</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencias">
+        <h3>EXPERIÊNCIAS</h3>
+        <h1>Minhas Experiências</h1>
+
+        <div class="experiencia reveal">
+            <h3>Pequenos Talentos</h3>
+            <p class="experiencia-sub">Trabalho Voluntário</p>
+            <p>Conte aqui sobre a sua atuação no projeto Pequenos Talentos: o que você fez, com quem trabalhou e o que aprendeu com a experiência.</p>
+        </div>
+    </section>
+
+    <section id="contato" class="contato-section">
+        <div class="contato-container">
+            <div class="contato-info reveal">
+                <h3>CONTATO</h3>
+                <h1>Entre em Contato</h1>
+                <p>Tem um projeto em mente ou quer trocar uma ideia? Preencha o formulário ou me chame direto por um dos canais abaixo.</p>
+
+                <div class="icons-contato">
+                    <a href="mailto:seuemail@gmail.com" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/seuuser" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/seuuser" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <form class="form-contato reveal">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+                <button type="submit" class="ripple-btn"><span>Enviar</span></button>
+                <p class="form-msg"></p>
+            </form>
+        </div>
+
+        <p class="rodape">© 2026 Ana Clara Cordeiro</p>
+    </section>
+
+</body>
+<script src="script.js"></script>
+
+</html>
